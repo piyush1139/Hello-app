@@ -1,1 +1,21 @@
-# Hello-app
+apppublic class GreetingApp {
+    public static void main(String[] args) {
+        
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+            return;
+        }
+
+        String names = "";
+        
+        for (String name : args) {
+            
+            if (!names.isEmpty()) {
+                names += ", ";
+            }
+            names += name;
+        }
+
+        System.out.println("Hello, " + names + "!");
+    }
+}
